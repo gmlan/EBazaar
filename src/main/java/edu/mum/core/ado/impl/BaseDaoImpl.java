@@ -5,15 +5,25 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import edu.mum.core.ado.BaseDao;
 import edu.mum.core.domain.PageResult;
 import edu.mum.core.domain.QueryHelper;
 
-public abstract class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
+public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 	
 	Class<T> clazz;
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	protected Session getSession() {
+		return sessionFactory.getCurrentSession();
+	}
 	
 	public BaseDaoImpl(){
 		ParameterizedType pt =  (ParameterizedType)this.getClass().getGenericSuperclass();//BaseDaoImpl<User>
@@ -22,22 +32,22 @@ public abstract class BaseDaoImpl<T> extends HibernateDaoSupport implements Base
 
 	@Override
 	public void save(T entity) {
-		getHibernateTemplate().save(entity);
+		getSession().save(entity);
 	}
 
 	@Override
 	public void update(T entity) {
-		getHibernateTemplate().update(entity);
+		getSession().update(entity);
 	}
 
 	@Override
 	public void delete(Serializable id) {
-		getHibernateTemplate().delete(findObjectById(id));
+		getSession().delete(findObjectById(id));
 	}
 
 	@Override
 	public T findObjectById(Serializable id) {
-		return getHibernateTemplate().get(clazz, id);
+		return (T) getSession().get(clazz, id);
 	}
 
 	@Override

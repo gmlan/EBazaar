@@ -5,12 +5,14 @@ import java.util.List;
 
 import org.hamcrest.core.Is;
 import org.hibernate.Query;
+import org.springframework.stereotype.Repository;
 
 import edu.mum.core.ado.impl.BaseDaoImpl;
 import edu.mum.cs425.ado.UserDao;
 import edu.mum.cs425.domain.User;
 import edu.mum.cs425.domain.UserRole; 
 
+@Repository
 public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
 	@Override
@@ -26,7 +28,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
 	@Override
 	public void saveUserRole(UserRole userRole) {
-		getHibernateTemplate().save(userRole);
+		getSession().save(userRole);
 	}
 
 	@Override

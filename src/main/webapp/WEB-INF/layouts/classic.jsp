@@ -7,8 +7,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
+	<link href="static/css/metisMenu.css" rel="stylesheet">
+
     <!-- Custom CSS -->
-    <link href="static/css/sb-admin.css" rel="stylesheet">
+    <link href="static/css/sb-admin-2.css" rel="stylesheet">
  
     <!-- Custom Fonts -->
     <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -25,11 +27,15 @@
     <!-- jQuery -->
     <script src="static/js/jquery.js"></script>
 
+    <script src="static/js/metisMenu.js"></script>
+
     <!-- jQuery UI -->
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
     <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
+    
+    <script src="static/js/sb-admin-2.js"></script>
  
     <!-- Data Tables -->
     <script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script> 
@@ -38,7 +44,7 @@
  
 <body>     
     <div id="wrapper">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
            <tiles:insertAttribute name="header" />
            <tiles:insertAttribute name="sidebar" />
         </nav>
@@ -46,10 +52,8 @@
             <tiles:insertAttribute name="body" />
         </div>
         <div>
-            <tiles:insertAttribute name="footer" />
-            
-        </div>
-            
+            <tiles:insertAttribute name="footer" />            
+        </div>            
     </div> 
         
 </body>

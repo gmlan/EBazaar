@@ -4,11 +4,26 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import org.hibernate.annotations.GenericGenerator;
+
+
+@Entity
+@Table
 public class User implements Serializable {
 	
+	@Id    
+    @GeneratedValue(generator="idGenerator")
+    @GenericGenerator(name="idGenerator", strategy="uuid2")
+    @Column(name="userId", unique = true)	
 	private String id;
 	private String dept;
 	private String account;
+	
+	@Size(min=4, message="At least 4 characters")
+    @Column(name="userName")  
 	private String name;
 	private String password;
 	
@@ -19,7 +34,7 @@ public class User implements Serializable {
 	private String email;
 	private Date birthday;
 	private String memo;
-	private List<UserRole> userRoles;
+	//private List<UserRole> userRoles;
 	
 	public static String USER_STATE_VALID = "1";
 	public static String USER_STATE_INVALID = "0";
@@ -112,10 +127,11 @@ public class User implements Serializable {
 	public void setMemo(String memo) {
 		this.memo = memo;
 	}
-	public List<UserRole> getUserRoles() {
+		
+	/*public List<UserRole> getUserRoles() {
 		return userRoles;
 	}
 	public void setUserRoles(List<UserRole> userRoles) {
 		this.userRoles = userRoles;
-	}
+	}*/
 }
