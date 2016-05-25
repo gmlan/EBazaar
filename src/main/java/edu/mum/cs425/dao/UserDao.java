@@ -1,9 +1,9 @@
-package edu.mum.cs425.ado;
+package edu.mum.cs425.dao;
 
 import java.io.Serializable;
 import java.util.List;
 
-import edu.mum.core.ado.BaseDao;
+import edu.mum.core.dao.BaseDao;
 import edu.mum.cs425.domain.User;
 import edu.mum.cs425.domain.UserRole;
 

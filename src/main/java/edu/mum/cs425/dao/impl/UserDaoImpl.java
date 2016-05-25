@@ -1,4 +1,4 @@
-package edu.mum.cs425.ado.impl;
+package edu.mum.cs425.dao.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.hamcrest.core.Is;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import edu.mum.core.ado.impl.BaseDaoImpl;
-import edu.mum.cs425.ado.UserDao;
+import edu.mum.core.dao.impl.BaseDaoImpl;
+import edu.mum.cs425.dao.UserDao;
 import edu.mum.cs425.domain.User;
 import edu.mum.cs425.domain.UserRole; 
 

@@ -1,4 +1,4 @@
-package edu.mum.core.ado;
+package edu.mum.core.dao;
 
 import java.io.Serializable;
 import java.util.List;

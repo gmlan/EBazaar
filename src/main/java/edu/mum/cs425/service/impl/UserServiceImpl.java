@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import com.sun.org.apache.xml.internal.security.Init;
 
 import edu.mum.core.service.impl.BaseServiceImpl;
-import edu.mum.cs425.ado.UserDao;
+import edu.mum.cs425.dao.UserDao;
 import edu.mum.cs425.domain.Role;
 import edu.mum.cs425.domain.User;
 import edu.mum.cs425.domain.UserRole;

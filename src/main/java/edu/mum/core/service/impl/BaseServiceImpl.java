@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-import edu.mum.core.ado.BaseDao;
+import edu.mum.core.dao.BaseDao;
 import edu.mum.core.domain.PageResult;
 import edu.mum.core.domain.QueryHelper;
 import edu.mum.core.service.BaseService;

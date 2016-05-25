@@ -1,4 +1,4 @@
-package edu.mum.core.ado.impl;
+package edu.mum.core.dao.impl;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -10,7 +10,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import edu.mum.core.ado.BaseDao;
+import edu.mum.core.dao.BaseDao;
 import edu.mum.core.domain.PageResult;
 import edu.mum.core.domain.QueryHelper;
 
