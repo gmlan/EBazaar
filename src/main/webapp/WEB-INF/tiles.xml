@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+ 
+    <!-- Base Define -->
+    <definition name="base.definition" 
+                template="/WEB-INF/layouts/classic.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />  
+        <put-attribute name="sidebar" value="/WEB-INF/basefragments/_sidebar.jsp" />
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />  
+    </definition>  
+ 
+    <!-- Home Page -->
+    <definition name="home" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_search.jsp" />  
+    </definition> 
+   
+    <definition name="books" extends="base.definition">  
+        <put-attribute name="title" value="Books Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_books.jsp" />  
+    </definition>  
+   
+    <definition name="listbooks" extends="base.definition">  
+        <put-attribute name="title" value="List of Books Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listbooks.jsp" />  
+    </definition>   
+   
+    <definition name="authors" extends="base.definition">  
+        <put-attribute name="title" value="Authors Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_authors.jsp" />  
+    </definition>  
+   
+    <definition name="listauthors" extends="base.definition">  
+        <put-attribute name="title" value="List of Author Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listauthors.jsp" />  
+    </definition> 
+   
+    <definition name="publishers" extends="base.definition">  
+        <put-attribute name="title" value="Publisher Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_publishers.jsp" />  
+    </definition>  
+   
+    <definition name="listpublishers" extends="base.definition">  
+        <put-attribute name="title" value="List of Publishers Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listpublishers.jsp" />  
+    </definition>     
+   
+      
+    <!-- ContactUs Page -->
+    <definition name="contactusPage" extends="base.definition">  
+        <put-attribute name="title" value="Contact Us" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_contactus.jsp" />  
+    </definition>  
+  
+    <definition name="adduser" extends="base.definition">  
+        <put-attribute name="title" value="Add User" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_adduser.jsp" />  
+    </definition>  
+   
+    <definition name="checkout" extends="base.definition">  
+        <put-attribute name="title" value="Book Checkout" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_checkout.jsp" />  
+    </definition>  
+   
+    <definition name="listCheckout" extends="base.definition">  
+        <put-attribute name="title" value="Book Checkout" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listCheckout.jsp" />  
+    </definition>  
+   
+    <definition name="listuser" extends="base.definition">  
+        <put-attribute name="title" value="List Users" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listuser.jsp" />  
+    </definition>  
+         
+    <definition name="search" extends="base.definition">  
+        <put-attribute name="title" value="Search Books" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_search.jsp" />  
+    </definition>  
+      
+    <definition name="listsearch" extends="base.definition">  
+        <put-attribute name="title" value="List Books" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listsearch.jsp" />  
+    </definition>  
+ 
+    <definition name="help" extends="base.definition">  
+        <put-attribute name="title" value="Help" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_help.jsp" />  
+    </definition>  
+ 
+    <definition name="listMember" extends="base.definition">  
+        <put-attribute name="title" value="Members List" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_listMember.jsp" />  
+    </definition> 
+   
+    <definition name="addMember" extends="base.definition">  
+        <put-attribute name="title" value="Add Member" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_addMember.jsp" />  
+    </definition> 
+    
+     <definition name="login" extends="base.definition">  
+        <put-attribute name="title" value="Login" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_login.jsp" />  
+    </definition> 
+    
+</tiles-definitions>
