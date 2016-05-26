@@ -123,7 +123,7 @@ public class User implements Serializable {
 	}
 	public String getMemo() {
 		return memo;
-	}
+	}	
 	public void setMemo(String memo) {
 		this.memo = memo;
 	}
@@ -134,4 +134,12 @@ public class User implements Serializable {
 	public void setUserRoles(List<UserRole> userRoles) {
 		this.userRoles = userRoles;
 	}*/
+	
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", dept=" + dept + ", account=" + account + ", name=" + name + ", password="
+				+ password + ", headImg=" + headImg + ", gender=" + gender + ", state=" + state + ", mobile=" + mobile
+				+ ", email=" + email + ", birthday=" + birthday + ", memo=" + memo + "]";
+	}
 }

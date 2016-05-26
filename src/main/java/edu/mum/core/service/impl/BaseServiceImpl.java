@@ -1,9 +1,12 @@
 package edu.mum.core.service.impl;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import javax.transaction.Transactional;
+
+import org.apache.log4j.Logger;
 
 import edu.mum.core.dao.BaseDao;
 import edu.mum.core.domain.PageResult;
@@ -13,14 +16,24 @@ import edu.mum.core.service.BaseService;
 public class BaseServiceImpl<T> implements BaseService<T> {
 	
 	private BaseDao<T> baseDao;
+	private Class<T> clazz;
+		
+	protected final Logger logger;
 	
+	@SuppressWarnings("unchecked")
+	public BaseServiceImpl() {
+		ParameterizedType pt =  (ParameterizedType)this.getClass().getGenericSuperclass();
+		clazz = (Class<T>)pt.getActualTypeArguments()[0];		
+		logger = Logger.getLogger(clazz);
+	}
+			
 	public void setBaseDao(BaseDao<T> baseDao) {
 		this.baseDao = baseDao;
 	}
 
 	@Override
 	@Transactional
-	public void save(T entity) {
+	public void save(T entity) {		
 		baseDao.save(entity);
 	}
 

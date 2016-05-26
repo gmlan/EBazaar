@@ -25,6 +25,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 		return sessionFactory.getCurrentSession();
 	}
 	
+	@SuppressWarnings("unchecked")
 	public BaseDaoImpl(){
 		ParameterizedType pt =  (ParameterizedType)this.getClass().getGenericSuperclass();//BaseDaoImpl<User>
 		clazz = (Class<T>)pt.getActualTypeArguments()[0];
