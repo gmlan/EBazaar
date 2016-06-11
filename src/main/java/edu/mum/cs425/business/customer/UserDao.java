@@ -1,4 +1,4 @@
-package edu.mum.cs425.dao;
+package edu.mum.cs425.business.customer;
 
 import java.io.Serializable;
 import java.util.List;

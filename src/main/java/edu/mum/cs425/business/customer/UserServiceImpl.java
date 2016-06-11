@@ -1,4 +1,4 @@
-package edu.mum.cs425.service.impl;
+package edu.mum.cs425.business.customer;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,12 +13,10 @@ import org.springframework.stereotype.Service;
 import com.sun.org.apache.xml.internal.security.Init;
 
 import edu.mum.core.service.impl.BaseServiceImpl;
-import edu.mum.cs425.dao.UserDao;
 import edu.mum.cs425.domain.Role;
 import edu.mum.cs425.domain.User;
 import edu.mum.cs425.domain.UserRole;
 import edu.mum.cs425.domain.UserRoleId;
-import edu.mum.cs425.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl extends BaseServiceImpl<User> implements UserService {

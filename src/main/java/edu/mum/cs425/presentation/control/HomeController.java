@@ -1,4 +1,4 @@
-package edu.mum.cs425.controller;
+package edu.mum.cs425.presentation.control;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.mum.cs425.business.customer.UserService;
 import edu.mum.cs425.domain.User;
-import edu.mum.cs425.service.UserService;
 
 @Controller
 @RequestMapping(value={"/"})

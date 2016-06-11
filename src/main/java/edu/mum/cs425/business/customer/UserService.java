@@ -1,4 +1,4 @@
-package edu.mum.cs425.service;
+package edu.mum.cs425.business.customer;
 
 import java.util.List;
 

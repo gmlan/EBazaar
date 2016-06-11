@@ -15,7 +15,7 @@
 
     <filter>
         <filter-name>loginFilter</filter-name>
-        <filter-class>edu.mum.cs425.filter.loginFilter</filter-class>
+        <filter-class>edu.mum.cs425.presentation.control.loginFilter</filter-class>
     </filter>
   
     <filter-mapping>

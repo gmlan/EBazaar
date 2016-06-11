@@ -1,8 +1,7 @@
-package edu.mum.cs425.filter;
+package edu.mum.cs425.presentation.control;
 
-import edu.mum.cs425.domain.User;
-import edu.mum.cs425.util.Constants;
 import java.io.IOException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -30,6 +29,7 @@ public class loginFilter implements Filter {
      * @see Filter#destroy()
      */
     public void destroy() {
+    	 
         // TODO Auto-generated method stub
     }
 

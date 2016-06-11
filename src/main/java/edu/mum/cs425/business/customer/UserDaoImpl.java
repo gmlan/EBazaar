@@ -1,4 +1,4 @@
-package edu.mum.cs425.dao.impl;
+package edu.mum.cs425.business.customer;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,6 @@ import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import edu.mum.core.dao.impl.BaseDaoImpl;
-import edu.mum.cs425.dao.UserDao;
 import edu.mum.cs425.domain.User;
 import edu.mum.cs425.domain.UserRole; 
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.mum.cs425.controller;
+package edu.mum.cs425.presentation.control;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import edu.mum.cs425.business.customer.UserService;
 import edu.mum.cs425.domain.User;
-import edu.mum.cs425.service.UserService;
-import edu.mum.cs425.util.Constants;
+import edu.mum.cs425.presentation.util.Constants;
 
 /**
  *
